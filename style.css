@@ -1,0 +1,49 @@
+weather-widget {
+  display: block;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--background-color, #f0f0f0);
+  color: var(--font-color, #333);
+  font-family: Arial, sans-serif;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.temperature {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.conditions {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.wind {
+  font-size: 1.2em;
+  color: var(--wind-color, #888);
+}
+
+.temperature::before {
+  content: "Current Temperature: ";
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+.conditions::after {
+  content: " (Weather conditions)";
+  font-style: italic;
+  color: var(--conditions-color, #555);
+}
+
+weather-widget:hover {
+  background-color: var(--hover-background-color, #e0e0e0);
+}
+
+weather-widget[data-warning] {
+  border: 2px solid red;
+}
